@@ -1,5 +1,5 @@
 /* *******************************************************************************************
- *                                                                                           *
+ *                                                                                          *
  * Please read the following tutorial before implementing tasks:                              *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
@@ -340,16 +340,7 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  if (num <= 0) {
-    return false;
-  }
-  let currentNum = num;
-
-  while (num % 2 === 0) {
-    currentNum /= 2;
-  }
-
-  return currentNum === 1;
+  return Math.log2(num) % 1 === 0;
 }
 
 /**
